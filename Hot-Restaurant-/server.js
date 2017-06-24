@@ -47,11 +47,11 @@ app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "home.html"));
 });
 
-app.get("/reserve", function(req, res) {
+app.get("/add", function(req, res) {
   res.sendFile(path.join(__dirname, "reserve.html"));
 });
 
-app.get("/reservations", function(req, res) {
+app.get("/add", function(req, res) {
   res.sendFile(path.join(__dirname, "reservations.html"));
 });
 
