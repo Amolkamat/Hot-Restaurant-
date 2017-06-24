@@ -28,10 +28,22 @@ var reservations = [{
   ID: 2
 
 }, {
-  name: "issac",
+  name: "ila",
   PhoneNumber: "3333333333",
-  Email: 'issac@issac.com',
+  Email: 'ila@ila.com',
   ID: 3
+},
+{
+  name: "issac",
+  PhoneNumber: "444444444",
+  Email: 'issac@issac.com',
+  ID: 4
+},
+{
+  name: "Mirita",
+  PhoneNumber: "6666666666",
+  Email: 'mirita@mirita.com',
+  ID: 5
 }];
 
 var waitingList = [];
@@ -56,7 +68,7 @@ app.get("/api/tables", function(req,res){
   res.json(reservations);
 });
 
-// Create New Characters - takes in JSON input
+// Create New Reservation - takes in JSON input
 app.post("/api/new", function(req, res) {
   var reservation = req.body;
   reservations.push(reservation);
