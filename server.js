@@ -15,29 +15,26 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
-// Star Wars Characters (DATA)
-// =============================================================
-var characters = [{
-  routeName: "Amol",
+
+var reservations = [{
   name: "Amol",
   PhoneNumber: "1111111111",
   Email: 'amol@amol.com',
   ID: 1
 }, {
-
-  routeName: "Dan",
   name: "Dan",
   PhoneNumber: "2222222222",
   Email: 'dan@dan.com',
   ID: 2
 
 }, {
-  routeName: "issac",
   name: "issac",
   PhoneNumber: "3333333333",
   Email: 'issac@issac.com',
   ID: 3
 }];
+
+var waitingList = [];
 
 // Routes
 // =============================================================
@@ -55,17 +52,15 @@ app.get("/reservations", function(req, res) {
   res.sendFile(path.join(__dirname, "reservations.html"));
 });
 
+app.get("/api/tables", function(req,res){
+  res.json(reservations);
+});
 
 // Create New Characters - takes in JSON input
 app.post("/api/new", function(req, res) {
-  var newcharacter = req.body;
-  newcharacter.routeName = newcharacter.name.replace(/\s+/g, "").toLowerCase();
-
-  console.log(newcharacter);
-
-  characters.push(newcharacter);
-
-  res.json(newcharacter);
+  var reservation = req.body;
+  reservations.push(reservation);
+  res.json(reservation);
 });
 
 // Starts the server to begin listening
