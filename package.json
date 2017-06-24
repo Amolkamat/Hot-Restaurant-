@@ -1,20 +1,16 @@
 {
-  "name": "Hot-Restaurant-",
+  "name": "restaurant",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Node app + Express",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Amolkamat/Hot-Restaurant-.git"
-  },
-  "keywords": [],
-  "author": "",
+  "author": "TeamProject",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Amolkamat/Hot-Restaurant-/issues"
-  },
-  "homepage": "https://github.com/Amolkamat/Hot-Restaurant-#readme"
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3"
+  }
 }
