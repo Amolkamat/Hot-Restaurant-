@@ -20,45 +20,39 @@
     </div>
     <div class="row">
 
+  <!-- updated-->
+
+  <div class="row">
       <div class="col-lg-12">
 
+        <!-- Current Tables in Use -->
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h3 class="panel-title"><strong>Table Reservation</strong></h3>
+            <h4 class="panel-title">Current Reservations</h4>
           </div>
-          <div class="panel-body">
-            <form method="POST" role="form">
-
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" id="name">
-              </div>
-
-              <div class="form-group">
-                <label for="PhoneNumber">PhoneNumber</label>
-                <input type="text" class="form-control" id="role">
-              </div>
-
-              <div class="form-group">
-                <label for="Email">Email</label>
-                <input type="text" class="form-control" id="age">
-              </div>
-
-              <div class="form-group">
-                <label for="ID">ID</label>
-                <input type="text" class="form-control" id="force-points">
-              </div>
-
-            </form>
-            <br>
-            <div class="text-right">
-              <button type="submit" class="btn btn-primary btn-md" id="add-btn"><span class="glyphicon glyphicon-fire"></span> Submit</button>
-            </div>
+          <div class="panel-body" id="tableSection">
           </div>
         </div>
 
+        <!-- Waiting List Panel -->
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">Waiting List</h4>
+          </div>
+          <div class="panel-body" id="waitlistSection">
+          </div>
+        </div>
       </div>
     </div>
+
+
+      <footer class="footer">
+        <div class="container">
+          <p>Control Panel</p>
+          <p><a href="#" id="clear">Clear Table</a> | <a href="/api/tables">API Table Link</a> | <a href="/api/waitlist">API Wait List</a></p>
+        </div>
+      </footer>
+
   </div>
 
   <script type="text/javascript">
